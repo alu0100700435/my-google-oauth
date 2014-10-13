@@ -1,5 +1,5 @@
 #!/usr/bin/env rackup
 
-require './app'
+require './mygoogleoauth'
 
 run Sinatra::Application

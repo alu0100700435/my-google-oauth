@@ -1,0 +1,19 @@
+.header h1{
+    
+    text-align: center;
+}
+
+
+p a {
+    color: red;
+    text-decoration: none;
+}
+
+.mastfoot .inner p{
+	color: grey;
+}
+.cover-heading{
+	padding: 50px 50px;
+
+	margin-top: -20%;
+}

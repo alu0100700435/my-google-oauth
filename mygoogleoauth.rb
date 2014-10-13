@@ -19,15 +19,29 @@ enable :sessions
 set :session_secret, '*&(^#234a)'
 
 get '/' do
-  irb: 'login'
+  erb :login
 end
 
 
 get '/auth/:name/callback' do
   @auth = request.env['omniauth.auth']
-  @nombre = @auth['info'].name
+  
+  @nombre = @auth['info'].first_name
+  @apellidos = @auth['info'].last_name
   @email = @auth['info'].email
   @imagen = @auth['info'].image
- 
+  @googlep = @auth['info'].link
+  @sexo = @auth['info'].gender
+  
+  puts "params = #{params}"
+  puts "@auth.class = #{@auth.class}"
+  puts "@auth info = #{@auth['info']}"
+  puts "@auth info class = #{@auth['info'].class}"
+  puts "@auth info name = #{@auth['info'].name}"
+  puts "@auth info email = #{@auth['info'].email}"
+  #puts "-------------@auth----------------------------------"
+  #PP.pp @auth
+  #puts "*************@auth.methods*****************"
+  #PP.pp @auth.methods.sort
   erb :index
 end
