@@ -1,9 +1,11 @@
 body {
   padding-top: 50px;
+
 }
 .starter-template {
   padding: 40px 15px;
-  text-align: -moz-center;
+  text-align: center;
+  vertical-align: middle;
 
 }
 
@@ -32,6 +34,10 @@ margin-top: 2%;
 
   width: 200px;
   height: auto;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  margin: auto;
 }
 
 .footer .container .text-muted a{
@@ -42,5 +48,6 @@ a .logo{
   width: 30px;
   height: auto;
   padding-bottom: 2%;
+  margin-top: -5px;
 
 }
