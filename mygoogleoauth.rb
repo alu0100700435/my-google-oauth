@@ -24,15 +24,7 @@ end
 
 
 get '/auth/:name/callback' do
-  @auth = request.env['omniauth.auth']
-  
-  @nombre = @auth['info'].first_name
-  @apellidos = @auth['info'].last_name
-  @email = @auth['info'].email
-  @imagen = @auth['info'].image
-  @googlep = @auth['info'].link
-  @sexo = @auth['info'].gender
-  
+  @auth = request.env['omniauth.auth']  
   puts "params = #{params}"
   puts "@auth.class = #{@auth.class}"
   puts "@auth info = #{@auth['info']}"

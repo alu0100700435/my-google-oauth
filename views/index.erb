@@ -30,7 +30,10 @@
         <div class="container">
 
           <div class="starter-template">
-          
+            <p> Nombre: <%= @auth['info'].first_name %> </p>
+            <p> Apellidos: <%=  @auth['info'].last_name %> </p>
+            <p> email: <%= @auth['info'].email %> </p>
+            <p> Google+: <%= @auth['info'].link %> </p>
           </div>
 
         </div><!-- /.container -->
