@@ -37,3 +37,10 @@ margin-top: 2%;
 .footer .container .text-muted a{
   color: red;
 }
+
+a .logo{
+  width: 30px;
+  height: auto;
+  padding-bottom: 2%;
+
+}
