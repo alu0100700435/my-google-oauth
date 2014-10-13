@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link href="/css/style2.css" rel="stylesheet">
-    	<link href="/css/bootstrap.min.css" rel="stylesheet">
-		  <link href="/css/bootstrap.css" rel="stylesheet">
-      <link href="/css/starter-template.css" rel="stylesheet">
-   		<title>My Google OAuth</title>
-   	</head>
-   	
-   	<body>
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="/css/style2.css" rel="stylesheet">
+      <link href="/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/css/bootstrap.css" rel="stylesheet">      
+      <title>My Google OAuth</title>
+    </head>
+    
+    <body>
         
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
@@ -29,15 +28,30 @@
 
         <div class="container">
 
+          <div class="container">
+
           <div class="starter-template">
-            <p> Nombre: <%= @auth['info'].first_name %> </p>
-            <p> Apellidos: <%=  @auth['info'].last_name %> </p>
-            <p> email: <%= @auth['info'].email %> </p>
-            <p> Google+: <%= @auth['info'].link %> </p>
+            <div class="header col-xs-12 col-lg-12 col-sm-12">
+              <% @imagen = @auth['info'].image %>
+              <% @imagen.slice! "sz=50" %>
+             
+              <img class="myimg img-responsive img-circle " src="<%= @imagen %> ">
+            </div>
+            <div class="main col-xs-12 col-lg-12 col-sm-12">              
+              <p> <strong id="tit"> Nombre: </strong><%= @auth['info'].first_name %> </p>
+              <p> <strong id="tit"> Apellidos: </strong><%=  @auth['info'].last_name %> </p>
+              <p> <strong id="tit"> email: </strong><%= @auth['info'].email %> </p>
+            </div>
           </div>
 
         </div><!-- /.container -->
 
+        </div><!-- /.container -->
+        <div class="footer">
+          <div class="container">
+            <p class="text-muted"> <a href="http://alu0100700435.github.io"> alu0100700435 </a>| All rights reserved</p>
+          </div>
+        </div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -46,6 +60,6 @@
         <script src="/js/bootstrap.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="/js/ie10-viewport-bug-workaround.js"></script>
-   	
-   	</body>
+    
+    </body>
 </html>
