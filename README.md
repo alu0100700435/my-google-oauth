@@ -34,7 +34,7 @@ Hay dos formas posibles de ver el funcionamiento de la aplicación, una mediante
     
     Una vez hecho todo lo anterior, procede a ejecutar *rake*, y por defecto se empezará a ejecutar, abre el navegador y escribe en la barra de direcciones *localhost:9292* y accederás a la web de la aplicación:
     
-    ![ejemplo navegador](PONER IMAGEN) 
+    ![ejemplo navegador]("https://raw.githubusercontent.com/alu0100700435/my-google-oauth/gh-pages/public/ejemplo.png") 
     
     Y ya, sólo has de dar autorizacion mediante google, y podrás ver el resultado.
     
